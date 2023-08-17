@@ -112,4 +112,5 @@ main {
   justify-content: center;
   align-items: center;
   font-size: 40rem;
+  text-shadow: 0.5 0.5 lightgreen;
 }

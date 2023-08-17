@@ -7,6 +7,10 @@
   min-height: 100vh;
 }
 
+p {
+  text-shadow: 0.5 0.5 greenyellow;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;
@@ -97,7 +101,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);

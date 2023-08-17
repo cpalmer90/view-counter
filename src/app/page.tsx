@@ -1,6 +1,15 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import "./globals.css";
 
-export default function Home() {
-  return <main className={styles.main}>0</main>;
+export default async function Home() {
+  const res = await fetch(
+    "https://api.github.com/repos/cpalmer90/view-counter",
+    { next: { revalidate: 3600 } }
+  );
+  const data = await res.json();
+  return (
+    <main>
+      {" "}
+      <p>{data.stargazers_count}</p>
+    </main>
+  );
 }
